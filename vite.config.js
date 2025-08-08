@@ -1,7 +1,14 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+// vite.config.js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  base: './', // optional, depending on hosting
+  build: {
+    outDir: 'dist',
+  },
+  server: {
+    historyApiFallback: true, // 👈 this helps local dev sometimes
+  }
+});
