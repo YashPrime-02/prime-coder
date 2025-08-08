@@ -14,3 +14,9 @@ body {
   border-radius: 4px;
 }
 
+/* Toast container always on top */
+#toast-container,
+.react-hot-toast {
+  z-index: 999999 !important;
+  position: relative;
+}
