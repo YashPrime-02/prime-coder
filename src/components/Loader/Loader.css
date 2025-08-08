@@ -144,3 +144,175 @@
     opacity: 1;
   }
 }
+/* Add this below .loader-tip */
+.loader-tip-faded {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  max-height: 80px;
+  overflow: hidden;
+}
+
+.faded-tip {
+  font-size: 0.95rem;
+  color: white;
+  animation: fadeMoveUp 0.6s ease forwards;
+  opacity: 0.5;
+}
+
+/* Faded tip animation */
+@keyframes fadeMoveUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 0.5;
+  }
+}
+/* Progress Bar Container */
+.loader-progress-bar {
+  width: 100%;
+  max-width: 500px;
+  height: 6px;
+  background: rgba(0, 120, 120, 0.2); /* Darker base */
+  border-radius: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 200, 200, 0.25),
+              inset 0 0 6px rgba(0, 180, 180, 0.2);
+}
+
+/* Stronger Neon Fill */
+.loader-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00c2ff, #0088ff, #00ffd5);
+  background-size: 300% 100%;
+  animation: neonFlow 2s linear infinite;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #00c2ff, 0 0 16px rgba(0, 200, 255, 0.6);
+}
+
+/* Smooth animated glowing flow */
+@keyframes neonFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+/* ----------------------------------- */
+/* 📱 Responsive Design for Mobiles 📱 */
+/* ----------------------------------- */
+@media (max-width: 768px) {
+  .loader-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    min-height: 100vh;
+  }
+
+  .loader-logo {
+    width: 70px;
+    margin-bottom: 10px;
+  }
+
+  .loader-spinner {
+    width: 50px;
+    height: 50px;
+    border-width: 4px;
+    margin-bottom: 15px;
+  }
+
+  .loader-tip {
+    font-size: 1rem;
+    text-align: center;
+    max-width: 90%;
+    margin-bottom: 10px;
+    white-space: normal;
+  }
+
+  .loader-tip-faded {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 18px; /* 🔥 Added margin below for spacing from progress bar */
+    gap: 5px;
+    max-height: 100px; /* Increased to fit 5 tips */
+    overflow: hidden;
+  }
+
+  .faded-tip {
+    font-size: 0.85rem;
+    text-align: center;
+    color: #aaa;
+  }
+
+  .loader-progress-bar {
+    width: 90%;
+    max-width: 400px;
+    height: 5px;
+    background: rgba(0, 255, 224, 0.08);
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 255, 224, 0.15),
+                inset 0 0 3px rgba(0, 255, 224, 0.1);
+  }
+
+  .loader-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #00ffe0, #6effff, #00ffe0);
+    background-size: 300% 100%;
+    animation: neonFlow 2s linear infinite;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 0 6px #00ffe0, 0 0 12px rgba(0, 255, 224, 0.4);
+  }
+
+  .loader-progress-text {
+    font-size: 13px;
+    margin-top: 6px;
+    color: #00ffe0;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .loader-logo {
+    width: 60px;
+  }
+
+  .loader-spinner {
+    width: 40px;
+    height: 40px;
+  }
+
+  .loader-tip {
+    font-size: 0.85rem;
+  }
+
+  .faded-tip {
+    font-size: 0.75rem;
+  }
+
+  .loader-progress-text {
+    font-size: 12px;
+  }
+
+  .loader-glow.glow-1,
+  .loader-glow.glow-2 {
+    width: 120px;
+    height: 120px;
+    filter: blur(60px);
+  }
+}

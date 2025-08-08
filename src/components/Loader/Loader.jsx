@@ -9,17 +9,18 @@ const tips = [
   "Binding Angular modules with ✨ directives...",
   "Injecting TypeScript types into the matrix...",
   "Structuring semantic HTML5 elements...",
-  "Initialising Live Preview ...",
-
+  "Initialising Live Preview ..."
 ];
 
-// Constants for timing
-const CHAR_TYPING_SPEED = 40; // ms per character
-const TIP_HOLD_TIME = 1600;   // ms pause after each full tip
+const CHAR_TYPING_SPEED = 40;
+const TIP_HOLD_TIME = 1600;
 
 export default function Loader() {
   const [tipIndex, setTipIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
+  const [finishedTips, setFinishedTips] = useState([]);
+  const [progress, setProgress] = useState(0);
+
   const navigate = useNavigate();
 
   const totalLoaderDuration = tips.reduce(
@@ -29,16 +30,16 @@ export default function Loader() {
 
   useEffect(() => {
     let charIndex = 0;
-    let interval;
-
     const currentTip = tips[tipIndex];
-
-    interval = setInterval(() => {
+    const interval = setInterval(() => {
       if (charIndex < currentTip.length) {
         setDisplayedText(currentTip.substring(0, charIndex + 1));
         charIndex++;
       } else {
         clearInterval(interval);
+        setFinishedTips((prev) => [...prev, currentTip + " ✅"]);
+        setProgress(((tipIndex + 1) / tips.length) * 100);
+
         setTimeout(() => {
           setDisplayedText("");
           setTipIndex((prev) => (prev + 1) % tips.length);
@@ -65,7 +66,23 @@ export default function Loader() {
       <div className="loader-wrapper">
         <img src={logo} alt="Logo" className="loader-logo" />
         <div className="loader-spinner"></div>
+
         <p className="loader-tip">{displayedText}</p>
+
+        <div className="loader-tip-faded">
+          {finishedTips.slice(-3).map((tip, idx) => (
+            <div key={idx} className="faded-tip">{tip}</div>
+          ))}
+        </div>
+
+        {/* Progress Bar with Percentage */}
+        <div className="loader-progress-bar">
+          <div
+            className="loader-progress-fill"
+            style={{ width: `${progress}%` }}
+          ></div>
+        </div>
+        <p className="loader-progress-text">{Math.round(progress)}% Loaded...</p>
       </div>
     </div>
   );
