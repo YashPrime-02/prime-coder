@@ -194,13 +194,29 @@ html, body {
 }
 
 /* === EDITOR + PREVIEW SPLIT === */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: #0a0a0a;
+  font-family: 'Fira Code', monospace;
+}
+
+.playground-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
 .editor-preview-row {
   flex: 1;
   display: flex;
   flex-direction: row;
   overflow: hidden;
+  min-height: 0; /* Important for flex children to allow scrolling */
 }
-
 .code-editor {
   width: 50%;
   padding: 1rem;
@@ -210,9 +226,10 @@ html, body {
   font-family: 'Fira Code', monospace;
   font-size: 14px;
   border-radius: 12px;
-  resize: vertical;
-  min-height: 300px;
+  resize: none;
+  height: 100%;
   outline: none;
+  overflow: auto;
   backdrop-filter: blur(8px);
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
   transition: all 0.3s ease;
@@ -222,6 +239,7 @@ html, body {
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
   border-color: #0ff;
 }
+
 
 .live-preview {
   width: 50%;
@@ -425,4 +443,47 @@ html, body {
 
 .fade-out {
   opacity: 0;
+}
+.loader-logo {
+  display: block;
+  margin: 0 auto 0px;
+  width: 100px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #00ffe0);
+  animation: fadeIn 0.8s ease-in-out;
+}
+.loader-logo:hover {
+  filter: drop-shadow(0 0 20px #00ffe0) brightness(1.2);
+  transform: scale(1.05); /* optional: subtle zoom effect */
+}
+.custom-footer {
+  margin-top: 20px;
+  padding: 12px 10px; /* Reduced padding */
+  background-color: #0a0a0a;
+  color: #ffffffcc;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  border-top: 1px solid #333;
+  box-shadow: 0 -1px 10px rgba(0, 255, 224, 0.2);
+  font-size: 13px; /* Optional: smaller font */
+}
+
+.custom-footer strong {
+  color: #00ffe0;
+}
+
+.footer-links {
+  margin-top: 6px; /* Reduced spacing */
+}
+
+.footer-links a {
+  margin: 0 8px;
+  font-size: 16px; /* Slightly smaller icon size */
+  color: #ffffffcc;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00ffe0;
+  transform: scale(1.15);
 }

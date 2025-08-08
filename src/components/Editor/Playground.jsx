@@ -6,6 +6,8 @@ import confetti from "canvas-confetti";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import logo from "../../assets/Logos/PRIME_CODER.png";
+
 import TabSwitcher from "./TabSwitcher";
 import CodeEditor from "./CodeEditor";
 import PreviewPane from "./PreviewPane";
@@ -188,6 +190,7 @@ zenMusic.play().catch((err) => {
   return (
   <div ref={vantaRef} className="playground-wrapper">
     <div className="editor-container">
+       <img src={logo} alt="Logo" className="loader-logo" />
       <h1 className="prime-heading">PRIME CODER</h1>
       <p className="prime-subheading">Craft, Compile, Create.</p>
 
@@ -208,6 +211,7 @@ zenMusic.play().catch((err) => {
           🧘 ZEN MODE
         </button>
       </div>
+      
     </div>
 
     {/* 👇 Floating UI Layer - CLOCK + TOAST */}
@@ -219,7 +223,9 @@ zenMusic.play().catch((err) => {
         closeButton={false}
       />
     </div>
+
   </div>
+  
 );
 
   
