@@ -1,0 +1,111 @@
+/* === VANTA BACKGROUND WRAPPER === */
+.playground-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Optional: Prevent blocking mouse events */
+  pointer-events: none;
+}
+
+/* === MAIN FOREGROUND CONTAINER === */
+.editor-container {
+  width: 90%;
+  height: 90%;
+  max-width: 1400px;
+  background-color: rgba(15, 15, 15, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  z-index: 2; /* Ensure above background */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  pointer-events: auto; /* Allow interaction here */
+}
+
+/* === TABS SECTION === */
+.tab-switcher {
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #111;
+  z-index: 2;
+}
+
+/* === INDIVIDUAL TAB === */
+.tab-button {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.tab-button.active {
+  color: #00ffee;
+  font-weight: bold;
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+/* === EDITOR + PREVIEW SPLIT === */
+.editor-preview-row {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+/* === CODE EDITOR SIDE === */
+.code-editor {
+  width: 50%;
+  padding: 1rem;
+  background-color: #121212;
+  color: #eee;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  border: none;
+  resize: none;
+  outline: none;
+  overflow: auto;
+}
+
+/* === PREVIEW SIDE === */
+.live-preview {
+  width: 50%;
+  border: none;
+  background: #fff;
+  overflow: auto;
+}
+
+/* === RESPONSIVE LAYOUT === */
+@media (max-width: 768px) {
+  .editor-preview-row {
+    flex-direction: column;
+  }
+
+  .code-editor,
+  .live-preview {
+    width: 100%;
+    height: 50%;
+  }
+}

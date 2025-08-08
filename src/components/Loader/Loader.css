@@ -1,0 +1,146 @@
+/* Base Loader Screen */
+.loader-screen {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, #0e0e0e 0%, #060606 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.6s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* Wrapper for layout */
+.loader-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Logo Styling */
+.loader-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 25px;
+  filter: drop-shadow(0 0 10px #00ffe0);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Glowing Neon Spinner */
+.loader-spinner {
+  width: 70px;
+  height: 70px;
+  border: 6px solid rgba(0, 255, 224, 0.15);
+  border-top: 6px solid #00ffe0;
+  border-radius: 50%;
+  animation: spin 1.1s linear infinite;
+  box-shadow: 0 0 20px #00ffe0, 0 0 40px rgba(0, 255, 224, 0.3);
+  margin-bottom: 35px;
+}
+
+/* Spinner Rotation */
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Tip Text Container */
+.loader-tip {
+  color: #ffffff;
+  font-size: 1.1rem;
+  text-align: center;
+  width: 100%;              /* 👈 Set a consistent width */
+  max-width: 500px;         /* 👈 Optional: limit line length */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #00ffe0;
+  min-height: 30px;
+  opacity: 0;
+  animation:
+    fadeIn 0.5s ease-in forwards,
+    typing 2.5s steps(40, end) 0.5s forwards,
+    blink 0.75s step-end infinite alternate;
+  font-family: 'Poppins', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  from { border-color: transparent; }
+  to { border-color: #00ffe0; }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* Typing Effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Blinking Cursor */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Glowing Light Dots Behind Loader */
+.loader-glow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #00ffe0;
+  filter: blur(100px);
+  opacity: 0.2;
+  border-radius: 50%;
+  animation: moveGlow 8s infinite alternate ease-in-out;
+}
+
+.loader-glow.glow-1 {
+  top: 10%;
+  left: 15%;
+}
+
+.loader-glow.glow-2 {
+  bottom: 15%;
+  right: 10%;
+}
+
+@keyframes moveGlow {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(30px, -30px);
+  }
+}
+
+/* Fade-In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
