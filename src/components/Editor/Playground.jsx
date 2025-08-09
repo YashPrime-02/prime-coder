@@ -186,40 +186,41 @@ zenMusic.play().catch((err) => {
 
   
   return (
-  <div ref={vantaRef} className="playground-wrapper">
-    <div className="editor-container">
-      <h1 className="prime-heading">PRIME CODER</h1>
-      <p className="prime-subheading">Craft, Compile, Create.</p>
+  <div ref={vantaRef} className="playground-wrapper responsive-playground">
+  <div className="editor-container responsive-editor">
+    <h1 className="prime-heading responsive-heading">PRIME CODER</h1>
+    <p className="prime-subheading responsive-subheading">Craft, Compile, Create.</p>
 
-      <TabSwitcher
-        languages={languages}
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-      />
+    <TabSwitcher
+      languages={languages}
+      activeTab={activeTab}
+      setActiveTab={setActiveTab}
+    />
 
-      <div className="editor-preview-row">
-        <CodeEditor activeTab={activeTab} code={code} setCode={setCode} />
-        <Toolbar handleRun={handleRun} handleReset={handleReset} />
-        <PreviewPane srcDoc={previewSrc} />
-      </div>
-
-      <div className="zen-mode-wrapper">
-        <button className="zen-mode-btn" onClick={triggerZenMode}>
-          🧘 ZEN MODE
-        </button>
-      </div>
+    <div className="editor-preview-row responsive-editor-row">
+      <CodeEditor activeTab={activeTab} code={code} setCode={setCode} />
+      <Toolbar handleRun={handleRun} handleReset={handleReset} />
+      <PreviewPane srcDoc={previewSrc} />
     </div>
 
-    {/* 👇 Floating UI Layer - CLOCK + TOAST */}
-    <div className="floating-ui">
-      <div className="clock">{currentTime}</div>
-      <ToastContainer
-        toastClassName="motivation-toast"
-        bodyClassName=""
-        closeButton={false}
-      />
+    <div className="zen-mode-wrapper responsive-zen">
+      <button className="zen-mode-btn" onClick={triggerZenMode}>
+        🧘 ZEN MODE
+      </button>
     </div>
   </div>
+
+  {/* 👇 Floating UI Layer - CLOCK + TOAST */}
+  <div className="floating-ui responsive-floating">
+    <div className="clock responsive-clock">{currentTime}</div>
+    <ToastContainer
+      toastClassName="motivation-toast"
+      bodyClassName=""
+      closeButton={false}
+    />
+  </div>
+</div>
+
 );
 
   
