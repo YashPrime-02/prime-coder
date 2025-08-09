@@ -198,18 +198,19 @@ zenMusic.play().catch((err) => {
       activeTab={activeTab}
       setActiveTab={setActiveTab}
     />
-
-    <div className="editor-preview-row responsive-editor-row">
-      <CodeEditor activeTab={activeTab} code={code} setCode={setCode} />
-      <Toolbar handleRun={handleRun} handleReset={handleReset} />
-      <PreviewPane srcDoc={previewSrc} />
-    </div>
-
-    <div className="zen-mode-wrapper responsive-zen">
+<div className="zen-mode-wrapper responsive-zen">
       <button className="zen-mode-btn" onClick={triggerZenMode}>
         🧘 ZEN MODE
       </button>
     </div>
+    <div className="editor-preview-row responsive-editor-row">
+      <CodeEditor activeTab={activeTab} code={code} setCode={setCode} />
+      <Toolbar handleRun={handleRun} handleReset={handleReset} />
+      <PreviewPane srcDoc={previewSrc} />
+      
+    </div>
+
+    
 
   </div>
 
