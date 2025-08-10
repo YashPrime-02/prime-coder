@@ -1,5 +1,4 @@
 # 🚀 Prime Coder
-[![Netlify Status](https://api.netlify.com/api/v1/badges/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/deploy-status)](https://wonderful-stardust-b1031b.netlify.app/)
 ![React](https://img.shields.io/badge/React-18-blue?logo=react)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Forks](https://img.shields.io/github/forks/YOUR_USERNAME/prime-coder?style=social)
