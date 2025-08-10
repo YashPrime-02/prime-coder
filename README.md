@@ -91,5 +91,5 @@ This project is licensed under the MIT License — free to use, modify, and dist
 
 📬 Contact
 💡 Created by Yash Mishra
-📧 Email: [your-email-here]
+📧 Email: yashprime000@gmail.com
 
