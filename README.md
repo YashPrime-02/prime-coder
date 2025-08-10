@@ -1,7 +1,12 @@
 # 🚀 Prime Coder
+[![Netlify Status](https://api.netlify.com/api/v1/badges/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/deploy-status)](https://wonderful-stardust-b1031b.netlify.app/)
+![React](https://img.shields.io/badge/React-18-blue?logo=react)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Forks](https://img.shields.io/github/forks/YOUR_USERNAME/prime-coder?style=social)
 
-**Prime Coder** is a cutting-edge, online code playground and compiler for **HTML**, **CSS**, **JSX**, **TSX**, and **TypeScript**, built with **React**.  
-It’s designed to be **fast, responsive, and beginner-friendly** — no login required. Simply open it in your browser and start coding instantly.
+**Prime Coder** is a cutting-edge online playground & compiler for **HTML**, **CSS**, **JSX**, **TSX**, and **TypeScript**, built with **React**.  
+No sign-up. No hassle. Just open the link and start coding instantly.
+
 
 🌐 **Live Demo:** [Prime Coder on Netlify](https://wonderful-stardust-b1031b.netlify.app/)
 
