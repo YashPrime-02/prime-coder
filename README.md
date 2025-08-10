@@ -16,13 +16,6 @@ It’s designed to be **fast, responsive, and beginner-friendly** — no login r
 - 🔄 **No Login Needed** – Just open and code.
 - 🚀 **Fast Load Times** – Optimized build, hosted on Netlify.
 
----
-
-## 📸 Preview
-
-![Prime Coder Preview](https://i.ibb.co/7tdsW2y/code-editor-preview.png)
-
----
 
 ## 🛠 Tech Stack
 
