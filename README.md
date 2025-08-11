@@ -1,11 +1,10 @@
 # 🚀 Prime Coder
 ![React](https://img.shields.io/badge/React-18-blue?logo=react)
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Forks](https://img.shields.io/github/forks/YOUR_USERNAME/prime-coder?style=social)
+![Forks](https://img.shields.io/github/forks/YashPrime-02/prime-coder?style=social)
 
 **Prime Coder** is a cutting-edge online playground & compiler for **HTML**, **CSS**, **JSX**, **TSX**, and **TypeScript**, built with **React**.  
 No sign-up. No hassle. Just open the link and start coding instantly.
-
 
 🌐 **Live Demo:** [Prime Coder on Netlify](https://wonderful-stardust-b1031b.netlify.app/)
 
@@ -20,13 +19,14 @@ No sign-up. No hassle. Just open the link and start coding instantly.
 - 🔄 **No Login Needed** – Just open and code.
 - 🚀 **Fast Load Times** – Optimized build, hosted on Netlify.
 
+---
 
 ## 🛠 Tech Stack
 
-- **Frontend:** React, JavaScript, CSS
-- **Compiler/Editor:** Monaco Editor
-- **Hosting:** Netlify
-- **Build Tool:** Vite / React Scripts
+- **Frontend:** React, JavaScript, CSS  
+- **Compiler/Editor:** Monaco Editor + Babel  
+- **Hosting:** Netlify  
+- **Build Tool:** Vite / React Scripts  
 
 ---
 
@@ -48,40 +48,27 @@ npm install
 npm start
 
 
-🤝 Contribution Guidelines
-We welcome all contributions!
+## 🤝 Contribution Guidelines
+
+We welcome all contributions!  
 Please follow these steps:
 
-Fork the repository.
-
-Create a new branch for your feature or fix:
-
-bash
-Copy
-Edit
-git checkout -b feature-name
-Make your changes and commit them:
-
-bash
-Copy
-Edit
-git commit -m "Add: Short description of changes"
-Push your branch to your fork:
-
-bash
-Copy
-Edit
-git push origin feature-name
-Open a Pull Request to the main repository.
-
+1. Fork the repository.
+2. Create a new branch for your feature or fix:
+  
+   git checkout -b feature-name
 ✅ Rules
 Keep code clean, readable, and well-documented.
 
-Make sure the app builds and runs without errors before submitting.
+Ensure the app builds and runs without errors before submitting.
 
-For UI changes, ensure they are responsive and tested on both desktop and mobile.
+For UI changes, ensure responsiveness on both desktop and mobile.
 
-Write clear commit messages.
+Follow consistent coding style used in the repo.
+
+Write clear, descriptive commit messages.
+
+Avoid committing unnecessary files (e.g., node_modules).
 
 📜 License
 This project is licensed under the MIT License — free to use, modify, and distribute.
